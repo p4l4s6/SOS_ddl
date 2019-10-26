@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "704042281776",
+    "firebase_url": "https://sos-app-b0f0a.firebaseio.com",
+    "project_id": "sos-app-b0f0a",
+    "storage_bucket": "sos-app-b0f0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704042281776:android:ee7e68c8f7fb1b86b1b6f5",
+        "android_client_info": {
+          "package_name": "com.ddl.sos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "704042281776-a8rp5e25b826tvpcu7mmdpnrvi35dt3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdgTB16SzYtCbVPlui6kEn0V9ZBidKJXI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "704042281776-a8rp5e25b826tvpcu7mmdpnrvi35dt3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

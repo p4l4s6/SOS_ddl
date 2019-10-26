@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">SOS</string>
+    <string name="sos_logo">sos logo</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Mobile Number</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Join Now</string>
+    <string name="login">Login</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_incoming">Incoming Alerts</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_rate">Rate us</string>
+    <string name="menu_share">Share</string>
+    <string name="sos_btn_help_text">After pressing the sos button we will send your location to the nearby users for help.</string>
+    <string name="demo_user_name">Mr. user</string>
+    <string name="demo_user_phone">+880 123 456 7890</string>
+    <string name="demo_user_location">D-120/A, Road-12, Dhanmondi, Dhaka.</string>
+    <string name="demo_notification_title">New notification from admin</string>
+    <string name="demo_notification_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</string>
+    <string name="demo_notification_time">12 Oct 2019 11:32 AM</string>
+    <string name="save_profile">Save</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="send_verification">Send Verification</string>
+
+</resources>
