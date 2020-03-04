@@ -1,4 +1,4 @@
-package com.ddl.sos;
+package com.gh0stcr4ck3r.besafe;
 
 import org.junit.Test;
 

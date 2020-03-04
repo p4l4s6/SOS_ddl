@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ddl.sos">
+    package="com.gh0stcr4ck3r.besafe">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.gh0stcr4ck3r.besafe.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -28,11 +28,11 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.gh0stcr4ck3r.besafe.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
 
         <activity
-            android:name=".SignUpActivity"
+            android:name="com.gh0stcr4ck3r.besafe.SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,17 +40,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SettingsActivity" />
+        <activity android:name="com.gh0stcr4ck3r.besafe.SettingsActivity" />
 
         <activity
-            android:name=".VerificationActivity"
+            android:name="com.gh0stcr4ck3r.besafe.VerificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
 
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".NotificationsActivity" />
-        <activity android:name=".IncomingAlertActivity" />
+        <activity android:name="com.gh0stcr4ck3r.besafe.ProfileActivity" />
+        <activity android:name="com.gh0stcr4ck3r.besafe.NotificationsActivity" />
+        <activity android:name="com.gh0stcr4ck3r.besafe.IncomingAlertActivity" />
 
-        <service android:name=".services.GPSTracker" />
+        <service android:name="com.gh0stcr4ck3r.besafe.services.GPSTracker" />
 
     </application>
 

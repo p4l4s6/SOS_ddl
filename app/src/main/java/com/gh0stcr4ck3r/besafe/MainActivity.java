@@ -1,4 +1,4 @@
-package com.ddl.sos;
+package com.gh0stcr4ck3r.besafe;
 
 import android.Manifest;
 import android.app.Activity;
@@ -20,7 +20,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.ddl.sos.services.GPSTracker;
+import com.gh0stcr4ck3r.besafe.services.GPSTracker;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
