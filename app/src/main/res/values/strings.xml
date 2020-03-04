@@ -34,5 +34,6 @@
     <string name="save_profile">Save</string>
     <string name="verification_code">Verification Code</string>
     <string name="send_verification">Send Verification</string>
+    <string name="nid">NID Number</string>
 
 </resources>
