@@ -22,6 +22,7 @@ import android.view.MenuItem;
 
 import com.gh0stcr4ck3r.besafe.services.GPSTracker;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity
     private Double longitude;
     private Double latitude;
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        mAuth=FirebaseAuth.getInstance();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -58,22 +60,24 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconTintList(null);
 
         checkRunTimePermission();
+
 
         sosBtn = findViewById(R.id.sos_btn);
         sosBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("++++++++", "Clicked");
-                    gpsTracker = new GPSTracker(MainActivity.this);
-                    if (gpsTracker.canGetLocation()) {
-                        Location location = gpsTracker.getLocation();
-                        Log.d("+++Lng+++++++", String.valueOf(location.getLongitude()));
-                        Log.d("+++Lat+++++++", String.valueOf(location.getLatitude()));
-                    } else {
-                        Log.d("++++++++", "Location not found");
-                    }
+                gpsTracker = new GPSTracker(MainActivity.this);
+                if (gpsTracker.canGetLocation()) {
+                    Location location = gpsTracker.getLocation();
+                    Log.d("+++Lng+++++++", String.valueOf(location.getLongitude()));
+                    Log.d("+++Lat+++++++", String.valueOf(location.getLatitude()));
+                } else {
+                    Log.d("++++++++", "Location not found");
+                }
 
 
             }
@@ -128,6 +132,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
+        } else if (id == R.id.nav_logout) {
+            mAuth.signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -138,7 +146,7 @@ public class MainActivity extends AppCompatActivity
     public void checkRunTimePermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
-                    ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED||
+                    ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED ||
                     ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                 gpsTracker = new GPSTracker(getApplicationContext());
 
@@ -197,7 +205,7 @@ public class MainActivity extends AppCompatActivity
                     } else {
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                             requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION,
-                                    Manifest.permission.ACCESS_BACKGROUND_LOCATION},10);
+                                    Manifest.permission.ACCESS_BACKGROUND_LOCATION}, 10);
                         }
                     }
                 }

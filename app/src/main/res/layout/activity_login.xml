@@ -23,25 +23,38 @@
             android:src="@drawable/sos_logo" />
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:background="@drawable/editext_white_bg"
-            android:drawableStart="@drawable/ic_call"
+            android:drawableStart="@drawable/ic_email"
             android:drawablePadding="15dp"
-            android:hint="@string/phone"
+            android:hint="@string/email"
             android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_white_bg"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="15dp"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="30dp"
             android:background="@drawable/red_btn"
-            android:onClick="sendVerificationMethod"
-            android:text="@string/send_verification"
+            android:onClick="loginMethod"
+            android:text="@string/login"
             android:textColor="#fff" />
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"

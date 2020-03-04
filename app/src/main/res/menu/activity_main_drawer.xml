@@ -20,6 +20,10 @@
         android:icon="@drawable/ic_rate"
         android:title="@string/menu_rate" />
     <item
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="@string/menu_logout" />
+    <item
         android:id="@+id/nav_share"
         android:icon="@drawable/ic_menu_share"
         android:title="@string/menu_share" />

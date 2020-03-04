@@ -29,9 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText eFirstName, eLastName, eEmail, ePassword, eMobile, eNid;
     private RadioGroup rGender;
     private String gender = "Male";
-    FirebaseDatabase database;
-    DatabaseReference databaseReference;
-
+    private FirebaseDatabase database;
+    private DatabaseReference databaseReference;
+    private FirebaseUser fUser;
 
 
     @Override
@@ -40,8 +40,9 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         mAuth = FirebaseAuth.getInstance();
-        database=FirebaseDatabase.getInstance();
-        databaseReference=database.getReference();
+        database = FirebaseDatabase.getInstance();
+        databaseReference = database.getReference();
+        fUser = mAuth.getCurrentUser();
 
         eFirstName = findViewById(R.id.et_first_name);
         eLastName = findViewById(R.id.et_last_name);
@@ -57,6 +58,11 @@ public class SignUpActivity extends AppCompatActivity {
                 gender = radioButton.getText().toString();
             }
         });
+
+        if (fUser != null) {
+            startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+            finish();
+        }
     }
 
     public void SignUpMethod(View view) {
@@ -111,7 +117,7 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void createUser(final User user) {
-        Log.d("+++++",String.valueOf(user));
+        Log.d("+++++", String.valueOf(user));
         mAuth.createUserWithEmailAndPassword(user.getEmail(), user.getPassword())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -122,7 +128,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
 
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                            saveProfile(user,firebaseUser.getUid());
+                            saveProfile(user, firebaseUser.getUid());
 
                         } else {
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -137,11 +143,15 @@ public class SignUpActivity extends AppCompatActivity {
         databaseReference.child(uid).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     startActivity(new Intent(SignUpActivity.this, MainActivity.class));
                     finish();
                 }
             }
         });
+    }
+
+    public void goToLoginActivity(View view) {
+        startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
     }
 }

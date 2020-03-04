@@ -35,5 +35,7 @@
     <string name="verification_code">Verification Code</string>
     <string name="send_verification">Send Verification</string>
     <string name="nid">NID Number</string>
+    <string name="menu_logout">Logout</string>
+    <string name="already_have">Already have an account? Login Here</string>
 
 </resources>
