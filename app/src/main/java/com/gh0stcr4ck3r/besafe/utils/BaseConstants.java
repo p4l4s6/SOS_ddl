@@ -9,4 +9,6 @@ package com.gh0stcr4ck3r.besafe.utils;
 public class BaseConstants {
     public static final String ACTION_EDIT = "action_edit";
     public static final String ACTION_ADD = "action_add";
+    public static final String BASE_URL = "";
+    public static final String MAPS_API_KEY = "AIzaSyCBB2DryI2uSKTKDqFGsXVA0H93sNThk8w";
 }

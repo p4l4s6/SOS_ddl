@@ -217,4 +217,8 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
     }
+
+    public void gotoContactActivity(View view) {
+        startActivity(new Intent(this,ContactActivity.class));
+    }
 }

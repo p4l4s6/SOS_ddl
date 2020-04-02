@@ -33,7 +33,6 @@ public class ContactActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private List<Contact> contactList;
-    private FirebaseDatabase firebaseDatabase;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     private FirebaseUser fUser;
