@@ -16,7 +16,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.ContactActivity"/>
+        <activity android:name=".ui.activities.PlaceListActivity"></activity>
+        <activity android:name=".ui.activities.ContactActivity" />
         <activity
             android:name=".ui.activities.MainActivity"
             android:label="@string/title_activity_main"
@@ -46,11 +47,9 @@
         <activity android:name=".ui.activities.IncomingAlertActivity" />
 
         <service android:name=".services.GPSTracker" />
-
         <service
             android:name=".services.LocationTrackerService"
             android:exported="false" />
-
     </application>
 
 </manifest>
