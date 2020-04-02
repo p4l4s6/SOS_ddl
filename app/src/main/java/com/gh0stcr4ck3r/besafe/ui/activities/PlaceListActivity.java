@@ -43,11 +43,12 @@ public class PlaceListActivity extends AppCompatActivity {
         Intent intent = getIntent();
         placeType = intent.getStringExtra("place_type");
         gpsTracker = new GPSTracker(PlaceListActivity.this);
-        recyclerView=findViewById(R.id.place_recycler_view);
+        recyclerView = findViewById(R.id.place_recycler_view);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
+        getPlaceList();
 
     }
 
@@ -59,9 +60,9 @@ public class PlaceListActivity extends AppCompatActivity {
             api.getNearbyPlaces(placeType, locationString, 1000).enqueue(new Callback<NearbyPlaces>() {
                 @Override
                 public void onResponse(Call<NearbyPlaces> call, Response<NearbyPlaces> response) {
-                    if(response.isSuccessful() && response.body()!=null){
-                        resultList=response.body().getResults();
-                        adapter= new PlaceAdapter(resultList,PlaceListActivity.this);
+                    if (response.isSuccessful() && response.body() != null) {
+                        resultList = response.body().getResults();
+                        adapter = new PlaceAdapter(resultList, PlaceListActivity.this);
                         recyclerView.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
                     }
@@ -69,7 +70,7 @@ public class PlaceListActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<NearbyPlaces> call, Throwable t) {
-
+                    Toast.makeText(PlaceListActivity.this, "Check your internet connection", Toast.LENGTH_SHORT).show();
                 }
             });
         } else {

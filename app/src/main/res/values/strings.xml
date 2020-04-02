@@ -46,5 +46,7 @@
     <string name="hospital">Hospital</string>
     <string name="police_station">Police Station</string>
     <string name="blood_donors">Blood Donor</string>
+    <string name="demo_hospital_name">Square Hospital</string>
+    <string name="demo_hospital_address">18/F, Bir Uttam Qazi Nuruzzaman Sarak, West, Panthapath, Dhaka 1205</string>
 
 </resources>
