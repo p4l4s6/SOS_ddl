@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,41 +16,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".ui.activities.ContactActivity"></activity>
         <activity
-            android:name="com.gh0stcr4ck3r.besafe.MainActivity"
+            android:name=".ui.activities.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.gh0stcr4ck3r.besafe.LoginActivity"
+            android:name=".ui.activities.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-
         <activity
-            android:name="com.gh0stcr4ck3r.besafe.SignUpActivity"
+            android:name=".ui.activities.SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.gh0stcr4ck3r.besafe.SettingsActivity" />
-
+        <activity android:name=".ui.activities.SettingsActivity" />
         <activity
-            android:name="com.gh0stcr4ck3r.besafe.VerificationActivity"
+            android:name=".ui.activities.VerificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".ui.activities.ProfileActivity" />
+        <activity android:name=".ui.activities.NotificationsActivity" />
+        <activity android:name=".ui.activities.IncomingAlertActivity" />
 
-        <activity android:name="com.gh0stcr4ck3r.besafe.ProfileActivity" />
-        <activity android:name="com.gh0stcr4ck3r.besafe.NotificationsActivity" />
-        <activity android:name="com.gh0stcr4ck3r.besafe.IncomingAlertActivity" />
-
-        <service android:name="com.gh0stcr4ck3r.besafe.services.GPSTracker" />
-
+        <service android:name=".services.GPSTracker" />
     </application>
 
 </manifest>

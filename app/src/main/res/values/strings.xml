@@ -37,5 +37,11 @@
     <string name="nid">NID Number</string>
     <string name="menu_logout">Logout</string>
     <string name="already_have">Already have an account? Login Here</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="name_hint">Enter contact name</string>
+    <string name="address">Address</string>
+    <string name="new_contact_added">New contact added successfully</string>
+    <string name="menu_contact">Contact</string>
 
 </resources>

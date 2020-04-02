@@ -1,4 +1,4 @@
-package com.gh0stcr4ck3r.besafe;
+package com.gh0stcr4ck3r.besafe.ui.activities;
 
 import android.Manifest;
 import android.app.Activity;
@@ -20,6 +20,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 
+import com.gh0stcr4ck3r.besafe.R;
 import com.gh0stcr4ck3r.besafe.services.GPSTracker;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mAuth=FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -122,7 +123,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_incoming) {
+        if (id == R.id.nav_contacts) {
+            startActivity(new Intent(this, ContactActivity.class));
+        } else if (id == R.id.nav_incoming) {
             startActivity(new Intent(this, IncomingAlertActivity.class));
         } else if (id == R.id.nav_notifications) {
             startActivity(new Intent(this, NotificationsActivity.class));

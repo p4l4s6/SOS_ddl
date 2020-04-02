@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_sos_logo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/sos_logo"
+        android:src="@drawable/ic_person_add" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_sos_logo"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <EditText
+            android:id="@+id/ad_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_white_bg"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="15dp"
+            android:hint="@string/name_hint"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ad_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_white_bg"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="15dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+
+        <EditText
+            android:id="@+id/ad_et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_white_bg"
+            android:drawableStart="@drawable/ic_call"
+            android:drawablePadding="15dp"
+            android:hint="@string/phone"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/ad_et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/editext_white_bg"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="15dp"
+            android:hint="@string/address"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/editext_white_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/ad_save_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/green_btn"
+                android:text="@string/save"
+                android:textColor="#fff" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+
+            <Button
+                android:id="@+id/ad_cancel_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/red_btn"
+                android:text="@string/cancel"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

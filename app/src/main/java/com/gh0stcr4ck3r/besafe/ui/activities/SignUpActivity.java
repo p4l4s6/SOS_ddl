@@ -1,4 +1,4 @@
-package com.gh0stcr4ck3r.besafe;
+package com.gh0stcr4ck3r.besafe.ui.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.gh0stcr4ck3r.besafe.R;
 import com.gh0stcr4ck3r.besafe.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
