@@ -1,5 +1,8 @@
 package com.gh0stcr4ck3r.besafe.models;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * @author : Raisul Islam
  * @date : 02-Apr-2020 4:16 PM
@@ -7,7 +10,12 @@ package com.gh0stcr4ck3r.besafe.models;
  * Copyright (C) 2020 - All Rights Reserved
  **/
 public class LocationModel {
+    @SerializedName("lat")
+    @Expose
     private Double latitude;
+
+    @SerializedName("lng")
+    @Expose
     private Double longitude;
     private String time;
 
